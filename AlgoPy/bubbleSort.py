@@ -1,13 +1,17 @@
 
-A = [2,7,4,1,5,3]
-
-for j in range(1,len(A)):
-    swapped = False
-    for i in range(1,len(A)):
-        if(A[i] < A[i-1]):
-            A[i-1],A[i] = A[i],A[i-1]
-            swapped = True
-    if(not swapped): 
-        break
-print(A)
-        
+# Python program for implementation of Bubble Sort
+ 
+def bubbleSort(arr):
+    n = len(arr)
+ 
+    # Traverse through all array elements
+    for i in range(n):
+ 
+        # Last i elements are already in place
+        for j in range(0, n-i-1):
+ 
+            # traverse the array from 0 to n-i-1
+            # Swap if the element found is greater
+            # than the next element
+            if arr[j] > arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j]
